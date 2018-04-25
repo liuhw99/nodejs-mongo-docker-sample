@@ -1,13 +1,16 @@
 {
-  "name": "docker-sample",
+  "name": "docker-nodejs",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "sample",
+  "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start" : "node app.js"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "docker"
+  ],
+  "author": "Huawei Liu",
   "license": "ISC",
   "dependencies": {
     "express-mongo-crud": "^1.3.0"
