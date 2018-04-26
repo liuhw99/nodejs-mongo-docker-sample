@@ -1,0 +1,13 @@
+version: '3'
+
+# Define the services/containers to be run
+services:
+  myapp2: #name of your service
+    build: ./ # specify the directory of the Dockerfile
+    command: node app.js
+    ports:
+      - "3000:3000" #specify ports forwarding
+    environment:
+      - NODE_ENV=qa
+    volumes:
+      - ./config_template:/usr/src/app/config

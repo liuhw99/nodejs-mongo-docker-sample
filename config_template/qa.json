@@ -1,0 +1,12 @@
+{
+  "mongodb": {
+      "host": "172.16.31.37",
+      "port": 8888
+    },
+  "httpserver": {
+      "port": 3000
+    },
+  "user": {
+    "name": "Huawei QA33"
+  }
+}

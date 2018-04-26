@@ -9,7 +9,7 @@ services:
       - "3000:3000" #specify ports forwarding
       - "5858:5858"
     environment:
-      -  NODE_ENV=dev
+      - NODE_ENV=dev
     volumes:
       - .:/usr/src/app
     depends_on:

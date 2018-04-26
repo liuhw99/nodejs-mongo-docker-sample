@@ -6,7 +6,7 @@ var bodyParser = require('body-parser');
 var instantMongoCrud = require('express-mongo-crud'); // require the module
 var config = require('config');
 
-var HTTP_HOST = config.get("httpserver.host");
+var HTTP_HOST = "192.168.99.100"; //config.get("httpserver.host");
 var HTTP_PORT = config.get("httpserver.port");
 var DB_HOST = config.get("mongodb.host");
 var DB_PORT = config.get("mongodb.port") || 27017;
