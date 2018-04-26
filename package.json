@@ -5,7 +5,7 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start" : "node app.js"
+    "start": "node app.js"
   },
   "keywords": [
     "docker"
@@ -13,6 +13,7 @@
   "author": "Huawei Liu",
   "license": "ISC",
   "dependencies": {
-    "express-mongo-crud": "^1.3.0"
+    "express-mongo-crud": "^1.3.0",
+    "config": "1.30.0"
   }
 }

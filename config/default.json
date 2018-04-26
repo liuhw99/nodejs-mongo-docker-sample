@@ -1,0 +1,13 @@
+{
+  "mongodb": {
+      "host": "database",
+      "port": 27017
+    },
+  "httpserver": {
+      "host": "192.168.99.100",
+      "port": 3000
+    },
+  "user": {
+    "name": "Huawei Dev"
+  }
+}

@@ -4,13 +4,16 @@ var router = express.Router();
 var mongoose = require('mongoose');
 var bodyParser = require('body-parser');
 var instantMongoCrud = require('express-mongo-crud'); // require the module
+var config = require('config');
 
-var HTTP_PORT = 3000;
-var HTTP_HOST = "localhost";//"192.168.99.100";
-var DB_HOST = "192.168.99.100";
+var HTTP_HOST = config.get("httpserver.host");
+var HTTP_PORT = config.get("httpserver.port");
+var DB_HOST = config.get("mongodb.host");
+var DB_PORT = config.get("mongodb.port") || 27017;
+var USER_NAME = config.get("user.name");
 
 // REQUIRE MIDDLEWARE
-mongoose.connect(DB_HOST + ':27017/mongocrud');
+mongoose.connect(DB_HOST + ':' + DB_PORT + '/mongocrud');
 app.use(bodyParser.json()); // add body parser
 
 var options = { //specify express-mongo-crud options
@@ -19,7 +22,8 @@ var options = { //specify express-mongo-crud options
 app.use(instantMongoCrud(options)); // use as middleware
 
 router.get('/', function(req, res){
-    res.send('works well112244');
+	//console.log(USER_NAME);
+    res.send('Hello ' + USER_NAME);
 });
 app.use(router);
 

@@ -1,0 +1,8 @@
+{
+  "mongodb": {
+      "host": "192.168.99.100"
+    },
+  "user": {
+    "name": "Huawei QA"
+  }
+}
